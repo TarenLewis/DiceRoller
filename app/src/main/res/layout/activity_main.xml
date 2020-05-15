@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
-    
+
+
+    <!-- The tools namespace only shows up during viewing in Android Studio,
+        it is used to configure the layout of the views but not used in runtime
+        of the actual program.-->
+    <!-- srcCompat is an earlier library from which we are extending the
+    appCompatActivity class to androidx and newer versions of Android -->
     <ImageView
         android:id="@+id/dice_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/dice_1"/>
+        app:srcCompat="@drawable/empty_dice"
+        tools:src="@drawable/dice_1"/>
+
 
     <Button
         android:id="@+id/roll_button"
